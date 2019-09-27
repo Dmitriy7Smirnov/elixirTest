@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "9e36359e-1201-4f5a-aae2-1869b6a07826",
+		"name": "ElixirTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Key-Value-TTL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Key",
+						"value": "dima",
+						"type": "text"
+					},
+					{
+						"key": "X-Value",
+						"value": "good",
+						"type": "text"
+					},
+					{
+						"key": "X-TTL",
+						"value": "20",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4444/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get value by key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/dima",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"dima"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete value by key",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444/dima",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"dima"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update value by key",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Value",
+						"value": "very_good",
+						"type": "text"
+					},
+					{
+						"key": "X-TTL",
+						"value": "15",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4444/dima",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444",
+					"path": [
+						"dima"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
